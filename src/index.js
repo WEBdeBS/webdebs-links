@@ -1,0 +1,1 @@
+window.yo = 'yo';

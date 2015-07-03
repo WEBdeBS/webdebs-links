@@ -1,11 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
+import Router from 'react-router';
 
-class App extends Component {
-  render() {
-    return (
-      <h1>Hello</h1>
-    );
-  }
-}
+import routes from './routes';
 
-React.render(<App />, document.getElementById('app'));
+Router.run(routes, Router.HashLocation, (Root) => {
+  React.render(<Root/>, document.body);
+});

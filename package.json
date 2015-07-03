@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index",
+    "lint": "eslint ./src",
     "test": "npm test"
   },
   "author": "Michele Bertoli",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^5.6.15",
+    "babel-eslint": "^3.1.20",
     "babel-loader": "^5.2.2",
+    "eslint-plugin-react": "^2.6.4",
     "node-libs-browser": "^0.5.2",
     "react": "^0.13.3",
     "react-hot-loader": "^1.2.7",

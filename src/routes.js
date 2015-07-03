@@ -8,6 +8,6 @@ import Repo from './components/Repo';
 export default (
   <Route handler={App}>
     <Route path='repos' handler={Repos} />
-    <Route path='repo' handler={Repo} />
+    <Route path='repo/:repo' handler={Repo} />
   </Route>
 );

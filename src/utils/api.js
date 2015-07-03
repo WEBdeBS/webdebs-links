@@ -13,3 +13,14 @@ export function getRepos() {
     });
   });
 }
+
+export function getRepo(repo) {
+  return when.promise((resolve, reject) => {
+    request.get(`https://api.github.com/repos/${user}/${repo}`).end((err, res) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(res.body);
+    });
+  });
+}

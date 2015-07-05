@@ -1,23 +1,38 @@
-var webpack = require("webpack");
-var webpackMiddleware = require("webpack-dev-middleware");
-var hmr = require("webpack-dev-hmr");
-var express = require('express');
+import webpack from 'webpack';
+import webpackMiddleware from 'webpack-dev-middleware';
+import hmr from "webpack-dev-hmr";
+import express from 'express';
+import fs from 'fs';
+import Router from 'react-router';
+import when from 'when';
 
-var app = express();
-var config = require('./webpack.config');
-var compiler = webpack(config);
+const app = express();
+const config = require('./webpack.config');
+const compiler = webpack(config);
+const routes = require('./src/routes');
+const path = __dirname + '/index.html';
 
 app.use(webpackMiddleware(compiler, {
   publicPath: config.output.publicPath
 }));
 
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
+app.get('*', (req, res) => {
+  Router.run(routes, req.url, (Root, state) => {
+    when.all(state.routes.filter((route) => {
+      return route.handler.fetchData;
+    }).map((route) => {
+      return route.handler.fetchData(state);
+    })).then((data) => {
+      let html = fs.readFileSync(path).toString();
+      html = html.replace('{DATA}', JSON.stringify(data));
+      res.send(html);
+    });
+  });
 });
 
-var server = app.listen(3000, 'localhost', function() {
+const server = app.listen(3000, 'localhost', () => {
   hmr.listen(server, compiler);
-  var host = server.address().address;
-  var port = server.address().port;
+  const host = server.address().address;
+  const port = server.address().port;
   console.log('Listening at http://%s:%s', host, port);
 });

@@ -4,12 +4,13 @@ import hmr from "webpack-dev-hmr";
 import express from 'express';
 import fs from 'fs';
 import Router from 'react-router';
-import when from 'when';
+
+import routes from './src/routes';
+import fetchData from './src/utils/fetchData';
 
 const app = express();
 const config = require('./webpack.config');
 const compiler = webpack(config);
-const routes = require('./src/routes');
 const path = __dirname + '/index.html';
 
 app.use(webpackMiddleware(compiler, {
@@ -18,11 +19,7 @@ app.use(webpackMiddleware(compiler, {
 
 app.get('*', (req, res) => {
   Router.run(routes, req.url, (Root, state) => {
-    when.all(state.routes.filter((route) => {
-      return route.handler.fetchData;
-    }).map((route) => {
-      return route.handler.fetchData(state);
-    })).then((data) => {
+    fetchData(state).then((data) => {
       let html = fs.readFileSync(path).toString();
       html = html.replace('{DATA}', JSON.stringify(data));
       res.send(html);

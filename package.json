@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index",
+    "start": "babel-node server",
     "lint": "eslint ./src",
     "test": "npm test"
   },

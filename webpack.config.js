@@ -4,7 +4,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/dev-server',
-    './src/index'
+    './src/client'
   ],
   output: {
     path: __dirname + '/dist',

@@ -6,15 +6,19 @@ import fetchData from './utils/fetchData';
 
 let first = true;
 
+const render = (Root, data) => {
+  React.render(<Root data={data}/>, document.body);
+};
+
 Router.run(routes, Router.HistoryLocation, (Root, state) => {
   if (first) {
     first = false;
     const data = window.DATA;
     delete window.DATA;
-    React.render(<Root data={data}/>, document.body);
+    render(Root, data);
   } else {
     fetchData(state).then((data) => {
-      React.render(<Root data={data}/>, document.body);
+      render(Root, data);
     });
   }
 });

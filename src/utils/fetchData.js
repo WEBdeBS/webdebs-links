@@ -6,4 +6,4 @@ export default (state) => {
   }).map((route) => {
     return route.handler.fetchData(state);
   }));
-}
+};

@@ -6,6 +6,12 @@ import fetchData from './utils/fetchData';
 
 let first = true;
 
+const rehydrate = () => {
+  const data = window.DATA;
+  delete window.DATA;
+  return data;
+}
+
 const render = (Root, data) => {
   React.render(<Root data={data}/>, document.body);
 };
@@ -13,9 +19,7 @@ const render = (Root, data) => {
 Router.run(routes, Router.HistoryLocation, (Root, state) => {
   if (first) {
     first = false;
-    const data = window.DATA;
-    delete window.DATA;
-    render(Root, data);
+    render(Root, rehydrate());
   } else {
     fetchData(state).then((data) => {
       render(Root, data);

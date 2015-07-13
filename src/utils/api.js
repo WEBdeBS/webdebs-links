@@ -1,10 +1,10 @@
 import request from 'superagent';
-import when from 'when';
+import {promise} from 'when';
 
 const user = 'MicheleBertoli';
 
 export function getRepos() {
-  return when.promise((resolve, reject) => {
+  return promise((resolve, reject) => {
     request.get(`https://api.github.com/users/${user}/repos`).end((err, res) => {
       if (err) {
         reject(err);
@@ -15,7 +15,7 @@ export function getRepos() {
 }
 
 export function getRepo(repo) {
-  return when.promise((resolve, reject) => {
+  return promise((resolve, reject) => {
     request.get(`https://api.github.com/repos/${user}/${repo}`).end((err, res) => {
       if (err) {
         reject(err);

@@ -8,7 +8,7 @@ export default class Repos extends Component {
     return getRepos();
   }
   renderRepos() {
-    const repos = this.props.data[0];
+    const {repos} = this.props.data;
     return Object.keys(repos).map((key) => {
       const repo = repos[key];
       return (

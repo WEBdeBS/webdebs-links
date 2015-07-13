@@ -7,7 +7,7 @@ export default class Repo extends Component {
     return getRepo(state.params.repo);
   }
   render() {
-    const repo = this.props.data[0];
+    const {repo} = this.props.data;
     return (
       <div>
         <h1>{repo.name}</h1>

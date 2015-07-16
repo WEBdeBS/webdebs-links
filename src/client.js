@@ -10,7 +10,7 @@ const rehydrate = () => {
   const data = window.DATA;
   delete window.DATA;
   return data;
-}
+};
 
 const render = (Root, data) => {
   React.render(<Root data={data}/>, document.body);

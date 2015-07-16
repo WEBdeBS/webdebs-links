@@ -1,13 +1,11 @@
 import React from 'react';
-import {Route} from 'react-router';
+import {Route, DefaultRoute} from 'react-router';
 
 import App from './App';
-import Repos from './components/Repos';
-import Repo from './components/Repo';
+import Links from './components/links';
 
 export default (
-  <Route name='app' path='/' handler={App}>
-    <Route name='repos' path='/repos' handler={Repos} />
-    <Route name='repo' path='/repo/:repo' handler={Repo} />
+  <Route name='app' path='/:page?' handler={App}>
+    <DefaultRoute name='links' handler={Links} />
   </Route>
 );

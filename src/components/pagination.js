@@ -12,8 +12,8 @@ export default class Pagination extends Component {
     return null;
   }
   renderNext() {
-    let {current} = this.props;
-    if (current < this.props.total - 1) {
+    let {current, total} = this.props;
+    if (current < total - 1) {
       return (
         <Link to="app" params={{page: ++current}}>Next</Link>
       );

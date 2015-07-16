@@ -3,6 +3,7 @@ import webpackMiddleware from 'webpack-dev-middleware';
 import hmr from "webpack-dev-hmr";
 import express from 'express';
 import fs from 'fs';
+import React from 'react';
 import Router from 'react-router';
 
 import routes from './src/routes';
@@ -20,9 +21,11 @@ app.use(webpackMiddleware(compiler, {
 app.get('*', (req, res) => {
   Router.run(routes, req.url, (Root, state) => {
     fetchData(state).then((data) => {
-      let html = fs.readFileSync(path).toString();
-      html = html.replace('{DATA}', JSON.stringify(data));
-      res.send(html);
+      var html = React.renderToString(<Root data={data} state={state} />);
+      let template = fs.readFileSync(path).toString();
+      template = template.replace('{HTML}', html);
+      template = template.replace('{DATA}', JSON.stringify(data));
+      res.send(template);
     });
   });
 });

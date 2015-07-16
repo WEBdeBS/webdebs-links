@@ -6,7 +6,7 @@ export default class App extends Component {
     return (
       <div>
         <h1>WEBdeBS</h1>
-        <RouteHandler {...this.props}/>
+        <RouteHandler {...this.props} />
       </div>
     );
   }

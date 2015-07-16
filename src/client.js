@@ -12,17 +12,17 @@ const rehydrate = () => {
   return data;
 };
 
-const render = (Root, data) => {
-  React.render(<Root data={data}/>, document.body);
+const render = (Root, state, data) => {
+  React.render(<Root data={data} state={state} />, document.body);
 };
 
 Router.run(routes, Router.HistoryLocation, (Root, state) => {
   if (first) {
     first = false;
-    render(Root, rehydrate());
+    render(Root, state, rehydrate());
   } else {
     fetchData(state).then((data) => {
-      render(Root, data);
+      render(Root, state, data);
     });
   }
 });

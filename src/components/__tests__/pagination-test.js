@@ -8,7 +8,7 @@ const TestUtils = React.addons.TestUtils;
 
 Pagination = reactRouterContext(Pagination);
 
-describe('pagination', function() {
+describe('Pagination', function() {
 
   it('shows Previous if there are previous pages', function() {
     const pagination = TestUtils.renderIntoDocument(<Pagination current={2} />);
@@ -33,6 +33,5 @@ describe('pagination', function() {
     const parent = TestUtils.findRenderedDOMComponentWithTag(pagination, 'div');
     expect(parent.getDOMNode().textContent).toEqual('');
   });
-
 
 });

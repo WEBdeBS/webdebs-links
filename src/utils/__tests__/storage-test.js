@@ -22,12 +22,12 @@ describe('Storage', function() {
 
   it('returns `true` if storage contains value', function() {
     const result = storage.contains('test');
-    expect(result).toBe(true);
+    expect(result).toEqual(true);
   });
 
   it('returns `false` if storage does not contains value', function() {
     const result = storage.contains('false');
-    expect(result).toBe(false);
+    expect(result).toEqual(false);
   });
 
 });

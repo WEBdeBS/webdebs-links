@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router';
 
 export default class Pagination extends Component {
+
   renderPrevious() {
     let {current} = this.props;
     if (current > 1) {
@@ -11,6 +12,7 @@ export default class Pagination extends Component {
     }
     return null;
   }
+
   renderNext() {
     let {current, total} = this.props;
     if (current < total) {
@@ -20,6 +22,7 @@ export default class Pagination extends Component {
     }
     return null;
   }
+
   render() {
     return (
       <div>
@@ -28,4 +31,5 @@ export default class Pagination extends Component {
       </div>
     );
   }
+  
 }

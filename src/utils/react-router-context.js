@@ -19,15 +19,18 @@ export default ReactRouterContext = (Element) => {
   RouterStub.setRouteComponentAtDepth = () => {};
 
   class StubbedComponent extends Component {
+
     getChildContext() {
       return {
         router: RouterStub,
         routeDepth: 0
       };
     }
+
     render() {
       return <Element {...this.props} />;
     }
+    
   }
 
   StubbedComponent.childContextTypes = {

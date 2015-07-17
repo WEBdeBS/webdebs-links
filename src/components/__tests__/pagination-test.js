@@ -3,10 +3,10 @@ jest.dontMock('../../utils/react-router-context');
 
 import React from 'react/addons';
 let Pagination = require('../pagination');
-const ReactRouterContext = require('../../utils/react-router-context');
+const reactRouterContext = require('../../utils/react-router-context');
 const TestUtils = React.addons.TestUtils;
 
-Pagination = ReactRouterContext(Pagination);
+Pagination = reactRouterContext(Pagination);
 
 describe('pagination', function() {
 

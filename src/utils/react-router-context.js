@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default ReactRouterContext = (Element) => {
+export default (Element) => {
 
   class RouterStub {}
 
@@ -30,7 +30,7 @@ export default ReactRouterContext = (Element) => {
     render() {
       return <Element {...this.props} />;
     }
-    
+
   }
 
   StubbedComponent.childContextTypes = {

@@ -31,5 +31,5 @@ export default class Pagination extends Component {
       </div>
     );
   }
-  
+
 }

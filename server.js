@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import hmr from "webpack-dev-hmr";
 import express from 'express';
+import cookieParser from 'cookie-parser';
 import fs from 'fs';
 import React from 'react';
 import Router from 'react-router';
@@ -18,10 +19,13 @@ app.use(webpackMiddleware(compiler, {
   publicPath: config.output.publicPath
 }));
 
+app.use(cookieParser());
+
 app.get('*', (req, res) => {
   Router.run(routes, req.url, (Root, state) => {
     fetchData(state).then((data) => {
-      var html = React.renderToString(<Root data={data} state={state} />);
+      const props = {data, state, req};
+      const html = React.renderToString(<Root {...props} />);
       let template = fs.readFileSync(path).toString();
       template = template.replace('__HTML__', html);
       template = template.replace('__DATA__', JSON.stringify(data));

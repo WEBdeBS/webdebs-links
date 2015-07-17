@@ -1,14 +1,10 @@
 import React, {Component} from 'react';
 import moment from 'moment';
-import dough from 'cookie-dough';
-
-import Storage from '../utils/storage';
 
 export default class Link extends Component {
 
   constructor() {
     super();
-    this.storage = new Storage(dough());
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -17,13 +13,13 @@ export default class Link extends Component {
   }
 
   handleClick() {
-    const {item} = this.props;
-    this.storage.add(item.link);
+    const {storage, item} = this.props;
+    storage.add(item.link);
   }
 
   getStyle() {
-    const {item} = this.props;
-    if (this.storage.contains(item.link)) {
+    const {storage, item} = this.props;
+    if (storage.contains(item.link)) {
       return {
         textDecoration: 'line-through'
       };
@@ -41,5 +37,5 @@ export default class Link extends Component {
       </li>
     );
   }
-  
+
 }

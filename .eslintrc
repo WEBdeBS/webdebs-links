@@ -5,7 +5,8 @@
   },
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "jasmine": true
   },
   "parser": "babel-eslint",
   "rules": {
@@ -18,5 +19,8 @@
   },
   "plugins": [
     "react"
-  ]
+  ],
+  "globals": {
+    "jest": true
+  }
 }

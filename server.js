@@ -23,8 +23,8 @@ app.get('*', (req, res) => {
     fetchData(state).then((data) => {
       var html = React.renderToString(<Root data={data} state={state} />);
       let template = fs.readFileSync(path).toString();
-      template = template.replace('{HTML}', html);
-      template = template.replace('{DATA}', JSON.stringify(data));
+      template = template.replace('__HTML__', html);
+      template = template.replace('__DATA__', JSON.stringify(data));
       res.send(template);
     });
   });

@@ -1,10 +1,12 @@
 
+const key = 'links';
+
 export default class Storage {
 
   constructor(method) {
     this.method = method;
     try {
-      this.links = JSON.parse(this.method.get('links'));
+      this.links = JSON.parse(this.method.get(key));
     } catch(e) {
       this.links = [];
     }
@@ -12,7 +14,7 @@ export default class Storage {
 
   add(value) {
     this.links.push(value);
-    this.method.set('links', JSON.stringify(this.links));
+    this.method.set(key, JSON.stringify(this.links));
   }
 
   contains(value) {

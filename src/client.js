@@ -2,7 +2,7 @@ import React from 'react';
 import Router from 'react-router';
 
 import routes from './routes';
-import fetchData from './utils/fetchData';
+import fetchData from './utils/fetch-data';
 
 let first = true;
 

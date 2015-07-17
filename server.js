@@ -7,7 +7,7 @@ import React from 'react';
 import Router from 'react-router';
 
 import routes from './src/routes';
-import fetchData from './src/utils/fetchData';
+import fetchData from './src/utils/fetch-data';
 
 const app = express();
 const config = require('./webpack.config');

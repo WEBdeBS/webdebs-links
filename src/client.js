@@ -13,7 +13,7 @@ const rehydrate = () => {
 };
 
 const render = (Root, state, data) => {
-  React.render(<Root data={data} state={state} />, document.body);
+  React.render(<Root data={data} state={state} />, document.getElementById('app'));
 };
 
 Router.run(routes, Router.HistoryLocation, (Root, state) => {

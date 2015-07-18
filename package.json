@@ -5,28 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node server",
+    "build": "webpack -p --config webpack.production.config.js",
     "lint": "eslint ./src",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npm run build"
   },
   "author": "Michele Bertoli",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "babel": "^5.6.14",
-    "babel-core": "^5.6.15",
-    "babel-eslint": "^3.1.20",
-    "babel-jest": "^5.3.0",
     "babel-loader": "^5.2.2",
-    "eslint-plugin-react": "^2.6.4",
     "express": "^4.13.0",
-    "jest-cli": "^0.4.15",
-    "node-libs-browser": "^0.5.2",
-    "react-hot-loader": "^1.2.7",
     "webpack": "^1.10.1",
     "webpack-dev-hmr": "^1.0.0",
     "webpack-dev-middleware": "^1.2.0",
-    "webpack-dev-server": "^1.10.1"
-  },
-  "dependencies": {
     "cookie-dough": "0.0.6",
     "cookie-parser": "^1.3.5",
     "moment": "^2.10.3",
@@ -34,6 +26,14 @@
     "react-router": "^0.13.3",
     "superagent": "^1.2.0",
     "when": "^3.7.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^3.1.20",
+    "babel-jest": "^5.3.0",
+    "eslint-plugin-react": "^2.6.4",
+    "jest-cli": "^0.4.15",
+    "react-hot-loader": "^1.2.7",
+    "webpack-dev-server": "^1.10.1"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",

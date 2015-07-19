@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node server",
-    "build": "webpack -p --config webpack.production.config.js",
+    "build": "webpack -p --config ./webpack/production.config.js",
     "lint": "eslint ./src",
     "test": "jest",
     "postinstall": "npm run build"

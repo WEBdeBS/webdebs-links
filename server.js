@@ -9,7 +9,7 @@ import routes from './src/routes';
 import fetchData from './src/utils/fetch-data';
 
 const app = express();
-const config = require('./webpack.config');
+const config = require('./webpack/development.config');
 const compiler = webpack(config);
 const path = __dirname + '/index.html';
 const isProduction = process.env.NODE_ENV === 'production';

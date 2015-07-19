@@ -1,5 +1,6 @@
 var webpack = require("webpack");
 var path = require("path");
+var autoprefixer = require('autoprefixer-core');
 
 module.exports = {
   entry: [
@@ -20,7 +21,8 @@ module.exports = {
       loaders: ['babel?stage=0']
     }, {
       test: /\.css$/,
-      loaders: ['css/locals?modules']
+      loaders: ['css/locals?modules', 'postcss']
     }]
-  }
+  },
+  postcss: [autoprefixer()]
 };

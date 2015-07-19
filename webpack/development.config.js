@@ -22,7 +22,7 @@ module.exports = {
       loaders: ['react-hot', 'babel?stage=0']
     }, {
       test: /\.css$/,
-      loaders: ['style', 'css?modules']
+      loaders: ['style?singleton', 'css?modules']
     }, {
       test: /\.png$/,
       loaders: ['file']

@@ -12,9 +12,9 @@ const item = {
   room: 'room'
 };
 
-describe('Link', function() {
+describe('Link', () => {
 
-  it('shows a crossed out link if viewed', function() {
+  it('shows a crossed out link if viewed', () => {
     const storage = {
       contains: () => true
     };
@@ -23,7 +23,7 @@ describe('Link', function() {
     expect(parent.getDOMNode().style['text-decoration']).toEqual('line-through');
   });
 
-  it('show a non-crossed out link if now viewed', function() {
+  it('show a non-crossed out link if now viewed', () => {
     const storage = {
       contains: () => false
     };

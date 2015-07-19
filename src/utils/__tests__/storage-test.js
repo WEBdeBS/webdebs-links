@@ -7,7 +7,7 @@ const method = {
   set: jest.genMockFunction()
 };
 
-describe('Storage', function() {
+describe('Storage', () => {
 
   let storage;
 
@@ -15,17 +15,17 @@ describe('Storage', function() {
     storage = new Storage(method);
   });
 
-  it('adds new values', function() {
+  it('adds new values', () => {
     storage.add('test');
     expect(method.set).toBeCalled();
   });
 
-  it('returns `true` if storage contains value', function() {
+  it('returns `true` if storage contains value', () => {
     const result = storage.contains('test');
     expect(result).toEqual(true);
   });
 
-  it('returns `false` if storage does not contains value', function() {
+  it('returns `false` if storage does not contains value', () => {
     const result = storage.contains('false');
     expect(result).toEqual(false);
   });

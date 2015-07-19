@@ -20,7 +20,7 @@ module.exports = {
       loaders: ['babel?stage=0']
     }, {
       test: /\.css$/,
-      loaders: ['css-loader/locals?modules']
+      loaders: ['css/locals?modules']
     }]
   }
 };

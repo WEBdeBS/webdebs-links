@@ -8,27 +8,27 @@ const TestUtils = React.addons.TestUtils;
 
 Pagination = reactRouterContext(Pagination);
 
-describe('Pagination', function() {
+describe('Pagination', () => {
 
-  it('shows Previous if there are previous pages', function() {
+  it('shows Previous if there are previous pages', () => {
     const pagination = TestUtils.renderIntoDocument(<Pagination current={2} />);
     const parent = TestUtils.findRenderedDOMComponentWithTag(pagination, 'div');
     expect(parent.getDOMNode().textContent).toEqual('Previous');
   });
 
-  it('does not show Previous if there are not previous pages', function() {
+  it('does not show Previous if there are not previous pages', () => {
     const pagination = TestUtils.renderIntoDocument(<Pagination current={1} />);
     const parent = TestUtils.findRenderedDOMComponentWithTag(pagination, 'div');
     expect(parent.getDOMNode().textContent).toEqual('');
   });
 
-  it('shows Next if there are next pages', function() {
+  it('shows Next if there are next pages', () => {
     const pagination = TestUtils.renderIntoDocument(<Pagination current={1} total={2} />);
     const parent = TestUtils.findRenderedDOMComponentWithTag(pagination, 'div');
     expect(parent.getDOMNode().textContent).toEqual('Next');
   });
 
-  it('does not show Next if there are not next pages', function() {
+  it('does not show Next if there are not next pages', () => {
     const pagination = TestUtils.renderIntoDocument(<Pagination current={1} total={1} />);
     const parent = TestUtils.findRenderedDOMComponentWithTag(pagination, 'div');
     expect(parent.getDOMNode().textContent).toEqual('');

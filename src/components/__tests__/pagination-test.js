@@ -13,7 +13,7 @@ describe('Pagination', () => {
   it('shows Previous if there are previous pages', () => {
     const pagination = TestUtils.renderIntoDocument(<Pagination current={2} />);
     const parent = TestUtils.findRenderedDOMComponentWithTag(pagination, 'div');
-    expect(parent.getDOMNode().textContent).toEqual('Previous');
+    expect(parent.getDOMNode().textContent).toEqual('«');
   });
 
   it('does not show Previous if there are not previous pages', () => {
@@ -25,7 +25,7 @@ describe('Pagination', () => {
   it('shows Next if there are next pages', () => {
     const pagination = TestUtils.renderIntoDocument(<Pagination current={1} total={2} />);
     const parent = TestUtils.findRenderedDOMComponentWithTag(pagination, 'div');
-    expect(parent.getDOMNode().textContent).toEqual('Next');
+    expect(parent.getDOMNode().textContent).toEqual('»');
   });
 
   it('does not show Next if there are not next pages', () => {

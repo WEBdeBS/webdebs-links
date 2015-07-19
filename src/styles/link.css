@@ -1,4 +1,26 @@
 .link {
-  padding-top: 3.75rem;
-  padding-bottom: 4.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 13.75rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.link:hover {
+  font-size: 2.6rem;
+  color: #0014e7;
+}
+
+.meta {
+  font-style: italic;
+}
+
+.url {
+  color: inherit;
+}
+
+.tags {
+  font-weight: 700;
+  text-transform: uppercase;
 }

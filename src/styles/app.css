@@ -47,6 +47,16 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 body,
 a {
   cursor: url('../images/cursor.png'), auto;

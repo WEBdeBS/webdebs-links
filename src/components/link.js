@@ -33,9 +33,9 @@ export default class Link extends Component {
     const {item} = this.props;
     return (
       <li className={styles.link} style={this.getStyle()}>
-        <div>{this.formatDate(item.date)} - {item.postedBy}</div>
-        <a href={item.link} onClick={this.handleClick}>{item.link}</a>
-        <div>#{item.room}</div>
+        <div className={styles.meta}>{this.formatDate(item.date)} - {item.postedBy}</div>
+        <a className={styles.url} href={item.link} onClick={this.handleClick}>{item.link}</a>
+        <div className={styles.tags}>#{item.room}</div>
       </li>
     );
   }

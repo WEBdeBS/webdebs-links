@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
+import styles from '../styles/pagination.css';
+
 export default class Pagination extends Component {
 
   renderPrevious() {
     let {current} = this.props;
     if (current > 1) {
       return (
-        <Link to="app" params={{page: --current}}>Previous</Link>
+        <Link to="app" params={{page: --current}}>&laquo;</Link>
       );
     }
     return null;
@@ -17,7 +19,7 @@ export default class Pagination extends Component {
     let {current, total} = this.props;
     if (current < total) {
       return (
-        <Link to="app" params={{page: ++current}}>Next</Link>
+        <Link to="app" params={{page: ++current}}>&raquo;</Link>
       );
     }
     return null;
@@ -25,7 +27,7 @@ export default class Pagination extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.pagination}>
         {this.renderPrevious()}
         {this.renderNext()}
       </div>

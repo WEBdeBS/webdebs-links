@@ -2,10 +2,10 @@ import React from 'react';
 import {Route, DefaultRoute} from 'react-router';
 
 import App from './app';
-import Links from './components/links';
+import Homepage from './components/homepage';
 
 export default (
   <Route name="app" path="/:page?" handler={App}>
-    <DefaultRoute name="links" handler={Links} />
+    <DefaultRoute name="homepage" handler={Homepage} />
   </Route>
 );

@@ -1,7 +1,5 @@
-import webpack from 'webpack';
-import webpackMiddleware from 'webpack-dev-middleware';
-import hmr from "webpack-dev-hmr";
 import express from 'express';
+import webpack from 'webpack';
 import cookieParser from 'cookie-parser';
 import fs from 'fs';
 import React from 'react';
@@ -16,15 +14,16 @@ const compiler = webpack(config);
 const path = __dirname + '/index.html';
 const isProduction = process.env.NODE_ENV === 'production';
 
+app.use(cookieParser());
+
 if (isProduction) {
   app.use(express.static('dist'));
 } else {
+  const webpackMiddleware = require('webpack-dev-middleware');
   app.use(webpackMiddleware(compiler, {
     publicPath: config.output.publicPath
   }));
 }
-
-app.use(cookieParser());
 
 app.get('*', (req, res) => {
   Router.run(routes, req.url, (Root, state) => {
@@ -44,6 +43,7 @@ const host = '0.0.0.0';
 
 const server = app.listen(port, host, () => {
   if (!isProduction) {
+    const hmr = require('webpack-dev-hmr');
     hmr.listen(server, compiler);
   }
   console.log('Listening at http://%s:%s', host, port);

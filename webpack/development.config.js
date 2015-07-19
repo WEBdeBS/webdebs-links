@@ -23,6 +23,9 @@ module.exports = {
     }, {
       test: /\.css$/,
       loaders: ['style', 'css?modules']
+    }, {
+      test: /\.png$/,
+      loaders: ['file']
     }]
   }
 };

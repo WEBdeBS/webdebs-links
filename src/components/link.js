@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import moment from 'moment';
 
+import styles from '../styles/link.css';
+
 export default class Link extends Component {
 
   constructor() {
@@ -30,7 +32,7 @@ export default class Link extends Component {
   render() {
     const {item} = this.props;
     return (
-      <li style={this.getStyle()}>
+      <li className={styles.link} style={this.getStyle()}>
         <div>{this.formatDate(item.date)} - {item.postedBy}</div>
         <a href={item.link} onClick={this.handleClick}>{item.link}</a>
         <div>#{item.room}</div>

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import Link from './link';
 
+import styles from '../styles/links.css';
+
 export default class Links extends Component {
 
   renderLinks() {
@@ -15,7 +17,9 @@ export default class Links extends Component {
 
   render() {
     return (
-      <ul>{this.renderLinks()}</ul>
+      <ul className={styles.links}>
+        {this.renderLinks()}
+      </ul>
     );
   }
 

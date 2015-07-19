@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 
+import styles from '../styles/header.css';
+
 export default class Header extends Component {
 
   render() {
     return (
-      <h1>WEBdeBS</h1>
+      <div className={styles.header}></div>
     );
   }
 

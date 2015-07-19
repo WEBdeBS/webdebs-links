@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../dist'),
     filename: 'bundle.js',
-    publicPath: '/dist/'
+    publicPath: '/'
   },
   plugins: [
     new ExtractTextPlugin('bundle.css')
@@ -22,6 +22,9 @@ module.exports = {
     }, {
       test: /\.css$/,
       loader: ExtractTextPlugin.extract('css?modules')
+    }, {
+      test: /\.png$/,
+      loaders: ['file']
     }]
   }
 };

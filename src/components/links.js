@@ -6,6 +6,8 @@ import Storage from '../utils/storage';
 import Link from './link';
 import Pagination from './pagination';
 
+import styles from '../styles/links.css';
+
 const defaultPage = 1;
 
 export default class Links extends Component {
@@ -26,7 +28,7 @@ export default class Links extends Component {
     const page = this.props.state.params.page || defaultPage;
     const {total} = this.props.data.links.pagination;
     return (
-      <div>
+      <div className={styles.links}>
         <ul>{this.renderLinks()}</ul>
         <Pagination current={page} total={total} />
       </div>

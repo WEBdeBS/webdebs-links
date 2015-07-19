@@ -1,19 +1,18 @@
 var webpack = require("webpack");
 var path = require("path");
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
-    './src/client'
+    './src/routes'
   ],
+  target: 'node',
+  externals: /^[a-z][a-z\.\-0-9]*$/,
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/'
+    filename: 'routes.js',
+    publicPath: '/',
+    libraryTarget: 'commonjs2'
   },
-  plugins: [
-    new ExtractTextPlugin('bundle.css')
-  ],
   module: {
     loaders: [{
       test: /\.jsx?$/,
@@ -21,7 +20,7 @@ module.exports = {
       loaders: ['babel?stage=0']
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('css?modules')
+      loaders: ['css-loader/locals?modules']
     }]
   }
 };

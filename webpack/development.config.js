@@ -20,6 +20,9 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /(node_modules)/,
       loaders: ['react-hot', 'babel?stage=0']
+    }, {
+      test: /\.css$/,
+      loaders: ['style', 'css?modules']
     }]
   }
 };

@@ -1,5 +1,6 @@
 var webpack = require("webpack");
 var path = require("path");
+var autoprefixer = require('autoprefixer-core');
 
 module.exports = {
   entry: [
@@ -22,10 +23,11 @@ module.exports = {
       loaders: ['react-hot', 'babel?stage=0']
     }, {
       test: /\.css$/,
-      loaders: ['style?singleton', 'css?modules']
+      loaders: ['style?singleton', 'css?modules', 'postcss']
     }, {
       test: /\.png$/,
       loaders: ['file']
     }]
-  }
+  },
+  postcss: [autoprefixer()]
 };

@@ -1,6 +1,7 @@
 var webpack = require("webpack");
 var path = require("path");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var autoprefixer = require('autoprefixer-core');
 
 module.exports = {
   entry: [
@@ -21,10 +22,11 @@ module.exports = {
       loaders: ['babel?stage=0']
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('css?modules')
+      loader: ExtractTextPlugin.extract('css?modules!postcss')
     }, {
       test: /\.png$/,
       loaders: ['file']
     }]
-  }
+  },
+  postcss: [autoprefixer()]
 };

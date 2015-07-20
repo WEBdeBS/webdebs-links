@@ -6,6 +6,7 @@
   font-size: 1.2rem;
   line-height: 1.4;
   color: #fe0000;
+  position: relative;
 }
 
 .link:hover,
@@ -35,4 +36,13 @@
 .tags {
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.separator {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - .625rem);
+  width: 1.25rem;
+  height: .125rem;
+  background-color: #9b9b9b;
 }

@@ -10,4 +10,5 @@
   height: 100%;
   border: 1.3rem solid #000;
   pointer-events: none;
+  z-index: 2;
 }

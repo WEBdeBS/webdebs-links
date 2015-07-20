@@ -40,6 +40,7 @@ export default class Link extends Component {
           </a>
           <div className={styles.tags}>#{item.room}</div>
         </div>
+        <div className={styles.separator}></div>
       </li>
     );
   }

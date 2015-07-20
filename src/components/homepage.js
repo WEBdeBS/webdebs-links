@@ -26,6 +26,7 @@ export default class Homepage extends Component {
         <Header />
         <Links items={data} storage={storage} />
         <Pagination current={page} total={pagination.total} />
+        <div className={styles.frame}></div>
       </div>
     );
   }

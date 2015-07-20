@@ -29,6 +29,7 @@
 
 .url {
   color: #000;
+  word-break: break-all;
 }
 
 .tags {

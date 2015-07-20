@@ -1,6 +1,9 @@
 .header {
   height: 16.25rem;
+  background-color: #fff;
   background-image: url('../images/logo.png');
   background-position: center;
   background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
 }

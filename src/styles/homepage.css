@@ -1,3 +1,13 @@
 .homepage {
   text-align: center;
 }
+
+.frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1.3rem solid #000;
+  pointer-events: none;
+}

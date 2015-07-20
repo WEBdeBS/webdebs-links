@@ -5,19 +5,30 @@
   height: 13.75rem;
   font-size: 1.2rem;
   line-height: 1.4;
+  color: #fe0000;
 }
 
-.link:hover {
+.link:hover,
+.link:hover * {
   font-size: 2.6rem;
   color: #0014e7;
+}
+
+.content {
+  color: #000;
 }
 
 .meta {
   font-style: italic;
 }
 
+.anchor {
+  color: #fe0000;
+  text-decoration: none;
+}
+
 .url {
-  color: inherit;
+  color: #000;
 }
 
 .tags {

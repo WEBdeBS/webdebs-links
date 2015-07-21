@@ -1,4 +1,5 @@
 .header {
+  display: block;
   height: 16.25rem;
   background-color: #fff;
   background-image: url('../images/logo.png');

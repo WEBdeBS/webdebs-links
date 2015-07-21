@@ -6,7 +6,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className={styles.header}></div>
+      <a className={styles.header} href="/"></a>
     );
   }
 

@@ -33,11 +33,6 @@
   word-break: break-all;
 }
 
-.tags {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 .separator {
   position: absolute;
   bottom: 0;

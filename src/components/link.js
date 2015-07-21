@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import moment from 'moment';
 
+import Tags from './tags';
+
 import styles from '../styles/link.css';
 
 export default class Link extends Component {
@@ -38,7 +40,7 @@ export default class Link extends Component {
           <a className={styles.anchor} href={item.link} onClick={this.handleClick}>
             <span className={styles.url}>{item.link}</span>
           </a>
-          <div className={styles.tags}>#{item.room}</div>
+          <Tags item={item} />
         </div>
         <div className={styles.separator}></div>
       </li>

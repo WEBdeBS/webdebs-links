@@ -6,10 +6,7 @@ const Link = require('../link');
 const TestUtils = React.addons.TestUtils;
 
 const item = {
-  date: 1234567890,
-  postedBy: 'user',
-  link: 'link',
-  room: 'room'
+  link: 'link'
 };
 
 describe('Link', () => {
@@ -23,7 +20,7 @@ describe('Link', () => {
     expect(parent.getDOMNode().style['text-decoration']).toEqual('line-through');
   });
 
-  it('show a non-crossed out link if now viewed', () => {
+  it('shows a non-crossed out link if now viewed', () => {
     const storage = {
       contains: () => false
     };

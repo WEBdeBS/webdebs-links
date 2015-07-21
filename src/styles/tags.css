@@ -1,0 +1,8 @@
+.tags {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tag {
+  padding: 0 .25rem;
+}

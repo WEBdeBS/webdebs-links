@@ -23,3 +23,16 @@
   border: .8125rem solid #000;
   z-index: 2;
 }
+
+.marquee {
+  font-family: 'Lato';
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

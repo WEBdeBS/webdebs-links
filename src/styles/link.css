@@ -18,6 +18,7 @@
   display: table-cell;
   vertical-align: middle;
   color: #000;
+  word-break: break-all;
 }
 
 .meta {
@@ -31,7 +32,6 @@
 
 .url {
   color: #000;
-  word-break: break-all;
 }
 
 .separator {

@@ -5,7 +5,18 @@
   background-image: url('../images/logo.png');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 10rem 2.125rem;
   position: fixed;
   width: 100%;
   z-index: 1;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+  .header {
+    background-image: url('../images/logo@2x.png');
+  }
+
 }

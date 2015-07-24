@@ -35,3 +35,8 @@ export default class Pagination extends Component {
   }
 
 }
+
+Pagination.propTypes = {
+  current: React.PropTypes.number.isRequired,
+  total: React.PropTypes.number.isRequired
+};

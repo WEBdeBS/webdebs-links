@@ -8,9 +8,9 @@ export default class Tags extends Component {
     const {tags, room} = this.props.item;
     const hashtags = [`#${room}`];
     hashtags.push.apply(hashtags, tags);
-    return hashtags.map((hashtag) => {
+    return hashtags.map((hashtag, index) => {
       return (
-        <span key={hashtag} className={styles.tag}>{hashtag}</span>
+        <span key={index} className={styles.tag}>{hashtag}</span>
       );
     });
   }
@@ -22,3 +22,7 @@ export default class Tags extends Component {
   }
 
 }
+
+Tags.propTypes = {
+  item: React.PropTypes.object.isRequired
+};

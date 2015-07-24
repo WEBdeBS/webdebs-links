@@ -48,3 +48,8 @@ export default class Link extends Component {
   }
 
 }
+
+Link.propTypes = {
+  item: React.PropTypes.object.isRequired,
+  storage: React.PropTypes.object.isRequired
+};

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 13.75rem;
+  min-height: 13.75rem;
   font-size: 1.2rem;
   line-height: 1.4;
   color: #fe0000;

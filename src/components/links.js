@@ -8,9 +8,9 @@ export default class Links extends Component {
 
   renderLinks() {
     const {items, storage} = this.props;
-    return items.map((item) => {
+    return items.map((item, index) => {
       return (
-        <Link key={item.link} item={item} storage={storage} />
+        <Link key={index} item={item} storage={storage} />
       );
     });
   }
@@ -24,3 +24,8 @@ export default class Links extends Component {
   }
 
 }
+
+Links.propTypes = {
+  items: React.PropTypes.array.isRequired,
+  storage: React.PropTypes.object.isRequired
+};

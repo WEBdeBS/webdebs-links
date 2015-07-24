@@ -11,13 +11,13 @@ Pagination = reactRouterContext(Pagination);
 describe('Pagination', () => {
 
   it('shows Previous if there are previous pages', () => {
-    const pagination = TestUtils.renderIntoDocument(<Pagination current={2} />);
+    const pagination = TestUtils.renderIntoDocument(<Pagination current={2} total={2} />);
     const parent = TestUtils.findRenderedDOMComponentWithTag(pagination, 'div');
     expect(parent.getDOMNode().textContent).toEqual('«');
   });
 
   it('does not show Previous if there are not previous pages', () => {
-    const pagination = TestUtils.renderIntoDocument(<Pagination current={1} />);
+    const pagination = TestUtils.renderIntoDocument(<Pagination current={1} total={1} />);
     const parent = TestUtils.findRenderedDOMComponentWithTag(pagination, 'div');
     expect(parent.getDOMNode().textContent).toEqual('');
   });

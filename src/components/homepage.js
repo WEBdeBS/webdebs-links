@@ -20,7 +20,7 @@ export default class Homepage extends Component {
   render() {
     const {data, pagination} = this.props.data.homepage;
     const storage = new Storage(dough(this.props.req));
-    const page = this.props.state.params.page || defaultPage;
+    const page = parseInt(this.props.state.params.page) || defaultPage;
     return (
       <div className={styles.homepage}>
         <Header />
@@ -32,3 +32,9 @@ export default class Homepage extends Component {
   }
 
 }
+
+Homepage.propTypes = {
+  data: React.PropTypes.object.isRequired,
+  state: React.PropTypes.object.isRequired,
+  req: React.PropTypes.object
+};

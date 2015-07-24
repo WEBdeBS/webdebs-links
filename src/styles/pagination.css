@@ -1,14 +1,13 @@
 .pagination {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   margin-top: 13.125rem;
   margin-bottom: 5rem;
 }
 
-.pagination a {
+.link {
   color: inherit;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   font-size: 2.5rem;
   line-height: 1.25;
   width: 4.375rem;
@@ -17,7 +16,7 @@
   margin: 0 .625rem;
 }
 
-.pagination a:hover {
+.link:hover {
   color: #fff;
   background-color: #000;
 }

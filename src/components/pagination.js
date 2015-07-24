@@ -9,7 +9,9 @@ export default class Pagination extends Component {
     let {current} = this.props;
     if (current > 1) {
       return (
-        <Link to="app" params={{page: --current}}>&laquo;</Link>
+        <Link className={styles.link} to="app" params={{page: --current}}>
+          &laquo;
+        </Link>
       );
     }
     return null;
@@ -19,7 +21,9 @@ export default class Pagination extends Component {
     let {current, total} = this.props;
     if (current < total) {
       return (
-        <Link to="app" params={{page: ++current}}>&raquo;</Link>
+        <Link className={styles.link} to="app" params={{page: ++current}}>
+          &raquo;
+        </Link>
       );
     }
     return null;

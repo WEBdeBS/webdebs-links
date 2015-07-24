@@ -1,8 +1,7 @@
 .link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 13.75rem;
+  display: table;
+  margin: 0 auto;
+  height: 13.75rem;
   font-size: 1.2rem;
   line-height: 1.4;
   color: #fe0000;
@@ -16,6 +15,8 @@
 }
 
 .content {
+  display: table-cell;
+  vertical-align: middle;
   color: #000;
 }
 

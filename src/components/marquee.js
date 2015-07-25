@@ -4,6 +4,10 @@ import styles from '../styles/marquee.css';
 
 export default class Marquee extends Component {
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }

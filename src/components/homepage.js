@@ -6,6 +6,7 @@ import Storage from '../utils/storage';
 import Header from './header';
 import Links from './links';
 import Pagination from './pagination';
+import Marquee from './marquee';
 
 import styles from '../styles/homepage.css';
 
@@ -15,28 +16,6 @@ export default class Homepage extends Component {
 
   static fetchData(state) {
     return getLinks(state.params.page || defaultPage);
-  }
-
-  renderMarquee1() {
-    const marquee = `
-      <marquee class=${styles.marquee} direction="down" behavior="alternate">
-        <marquee behavior="alternate">#OLD</marquee>
-      </marquee>
-    `;
-    return (
-      <div dangerouslySetInnerHTML={{__html:marquee}}></div>
-    );
-  }
-
-  renderMarquee2() {
-    const marquee =  `
-      <marquee class=${styles.marquee} scrolldelay="200" direction="up" behavior="alternate">
-        <marquee scrolldelay="200" behavior="alternate">Spiedo</marquee>
-      </marquee>
-    `;
-    return (
-      <div dangerouslySetInnerHTML={{__html:marquee}}></div>
-    );
   }
 
   render() {
@@ -49,8 +28,8 @@ export default class Homepage extends Component {
         <Links items={data} storage={storage} />
         <Pagination current={page} total={pagination.total} />
         <div className={styles.frame}></div>
-        {this.renderMarquee1()}
-        {this.renderMarquee2()}
+        <Marquee text="#old" />
+        <Marquee text="spiedo" />
       </div>
     );
   }

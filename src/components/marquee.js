@@ -13,17 +13,19 @@ export default class Marquee extends Component {
   }
 
   render() {
-    const direction = this.getRandomIntInclusive(0, 1) ? 'up' : 'down';
     const delay = this.getRandomIntInclusive(60, 300);
+    const outerDirection = this.getRandomIntInclusive(0, 1) ? 'up' : 'down';
+    const innerDirection = this.getRandomIntInclusive(0, 1) ? 'right' : 'left';
     const {text} = this.props;
     const marquee = `
       <marquee
         class="${styles.marquee}"
         scrolldelay="${delay}"
-        direction="${direction}"
+        direction="${outerDirection}"
         behavior="alternate">
           <marquee
             scrolldelay="${delay}"
+            direction="${innerDirection}"
             behavior="alternate">
               ${text}
           </marquee>

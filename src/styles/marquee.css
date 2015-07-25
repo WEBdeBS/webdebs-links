@@ -9,4 +9,21 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+  color: #45FF04;
+  animation: marquee 40s infinite;
+}
+
+@keyframes marquee {
+  0% {
+    color: #45FF04;
+  }
+  25% {
+    color: #FF0000;
+  }
+  50% {
+    color: #00FFEC;
+  }
+  75% {
+    color: #3000FF;
+  }
 }

@@ -30,6 +30,9 @@ export default class Homepage extends Component {
         <div className={styles.frame}></div>
         <Marquee text="#old" />
         <Marquee text="spiedo" />
+        <Marquee text="pota" />
+        <Marquee text="@cirpo" />
+        <Marquee text="java" />
       </div>
     );
   }

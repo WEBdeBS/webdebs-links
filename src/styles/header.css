@@ -1,21 +1,30 @@
 .header {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 9.375rem;
   background-color: #fff;
-  background-image: url('../images/logo.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 10rem 2.125rem;
   position: fixed;
   width: 100%;
   z-index: 1;
+}
+
+.logo {
+  width: 10rem;
+  height: 2.125rem;
+  background-image: url('../images/logo.png');
+  background-size: 10rem 2.125rem;
+}
+
+.logo:active {
+  transform: rotate(30deg);
 }
 
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
 
-  .header {
+  .logo {
     background-image: url('../images/logo@2x.png');
   }
 

@@ -1,4 +1,6 @@
 .links {
   font-family: 'Vollkorn';
   padding-top: 9.375rem;
+  max-width: 33rem;
+  margin: 0 auto;
 }

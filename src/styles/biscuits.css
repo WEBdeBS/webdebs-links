@@ -1,0 +1,68 @@
+:global(.cookie) {
+  display: inline-block;
+  width: 16.4375rem;
+  height: 16.6875rem;
+  background-image: url('../images/cookie.png');
+  position: absolute;
+  transition: bottom .5s ease-out;
+}
+
+:global(.cookie--0) {
+  bottom: -3rem;
+  left: 0;
+}
+
+:global(.cookie--0-appear.cookie--0-appear-active) {
+  bottom: -3rem;
+}
+
+:global(.cookie--1) {
+  bottom: -1rem;
+  left: 8.21875rem;
+  transition-delay: .25s;
+  transform: rotate(135deg);
+}
+
+:global(.cookie--1-appear.cookie--1-appear-active) {
+  bottom: -1rem;
+}
+
+:global(.cookie--2) {
+  bottom: -3.5rem;
+  right: 0;
+  transition-delay: .50s;
+  transform: rotate(270deg);
+}
+
+:global(.cookie--2-appear.cookie--2-appear-active) {
+  bottom: -3.5rem;
+}
+
+:global(.cookie--0-appear),
+:global(.cookie--1-appear),
+:global(.cookie--2-appear),
+:global(.cookie--3-appear) {
+  bottom: 200%;
+}
+
+:global(.credits) {
+  display: inline-block;
+  width: 20.4375rem;
+  height: 16.6875rem;
+  background-image: url('../images/credits.png');
+  position: absolute;
+  transition: bottom .5s ease-out;
+  bottom: 2.5rem;
+  right: 8.21875rem;
+  transition-delay: .75s;
+  transform: rotate(90deg);
+}
+
+:global(.credits-appear.credits-appear-active) {
+  bottom: 2.5rem;
+}
+
+:global(.credits-appear) {
+  bottom: 200%;
+}
+

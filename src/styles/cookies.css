@@ -1,3 +1,44 @@
 .cookies {
-  font-size: 3rem;
+  width: 43.125rem;
+  margin: 0 auto;
+  font-family: 'Lato';
+  padding-bottom: 27.5rem;
+  position: relative;
+  margin-bottom: -1rem;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 4.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.quote {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 3.25rem;
+}
+
+.text {
+  font-family: 'Vollkorn';
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #9b9b9b;
+  margin-bottom: 3.75rem;
+}
+
+.button {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  padding: 1rem 2rem;
+  border: .3125rem solid #000;
+}
+
+.button:hover {
+  background-color: #000;
+  color: #fff;
 }

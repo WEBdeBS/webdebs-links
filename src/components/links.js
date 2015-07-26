@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-import Link from './link';
-
 import styles from '../styles/links.css';
+
+import Link from './link';
 
 export default class Links extends Component {
 

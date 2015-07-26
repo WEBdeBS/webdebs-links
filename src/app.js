@@ -3,11 +3,19 @@ import {RouteHandler} from 'react-router';
 
 import styles from './styles/app.css';
 
+import Header from './components/header';
+
 export default class App extends Component {
 
   render() {
     return (
-      <RouteHandler {...this.props} />
+      <div className={styles.app}>
+        <Header />
+        <div className={styles.content}>
+          <RouteHandler {...this.props} />
+        </div>
+        <div className={styles.frame}></div>
+      </div>
     );
   }
 

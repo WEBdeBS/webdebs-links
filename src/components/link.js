@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import moment from 'moment';
 
-import Tags from './tags';
-
 import styles from '../styles/link.css';
+
+import Tags from './tags';
 
 export default class Link extends Component {
 

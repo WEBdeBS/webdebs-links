@@ -3,12 +3,9 @@ import dough from 'cookie-dough';
 
 import {getLinks} from '../utils/api';
 import Storage from '../utils/storage';
-import Header from './header';
-import Links from './links';
-import Pagination from './pagination';
-import Marquee from './marquee';
-
-import styles from '../styles/homepage.css';
+import Links from '../components/links';
+import Pagination from '../components/pagination';
+import Marquee from '../components/marquee';
 
 const defaultPage = 1;
 
@@ -23,11 +20,9 @@ export default class Homepage extends Component {
     const storage = new Storage(dough(this.props.req));
     const page = parseInt(this.props.state.params.page) || defaultPage;
     return (
-      <div className={styles.homepage}>
-        <Header />
+      <div>
         <Links items={data} storage={storage} />
         <Pagination current={page} total={pagination.total} />
-        <div className={styles.frame}></div>
         <Marquee text="#old" />
         <Marquee text="spiedo" />
         <Marquee text="pota" />

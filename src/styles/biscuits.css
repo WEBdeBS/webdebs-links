@@ -12,7 +12,7 @@
   left: 0;
 }
 
-:global(.cookie--0-appear.cookie--0-appear-active) {
+:global(.cookie--0-enter.cookie--0-enter-active) {
   bottom: -3rem;
 }
 
@@ -23,7 +23,7 @@
   transform: rotate(135deg);
 }
 
-:global(.cookie--1-appear.cookie--1-appear-active) {
+:global(.cookie--1-enter.cookie--1-enter-active) {
   bottom: -1rem;
 }
 
@@ -34,14 +34,14 @@
   transform: rotate(270deg);
 }
 
-:global(.cookie--2-appear.cookie--2-appear-active) {
+:global(.cookie--2-enter.cookie--2-enter-active) {
   bottom: -3.5rem;
 }
 
-:global(.cookie--0-appear),
-:global(.cookie--1-appear),
-:global(.cookie--2-appear),
-:global(.cookie--3-appear) {
+:global(.cookie--0-enter),
+:global(.cookie--1-enter),
+:global(.cookie--2-enter),
+:global(.cookie--3-enter) {
   bottom: 200%;
 }
 
@@ -58,11 +58,11 @@
   transform: rotate(90deg);
 }
 
-:global(.credits-appear.credits-appear-active) {
+:global(.credits-enter.credits-enter-active) {
   bottom: 2.5rem;
 }
 
-:global(.credits-appear) {
+:global(.credits-enter) {
   bottom: 200%;
 }
 

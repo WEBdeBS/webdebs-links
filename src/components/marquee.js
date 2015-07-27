@@ -18,17 +18,10 @@ export default class Marquee extends Component {
     const innerDirection = this.getRandomIntInclusive(0, 1) ? 'right' : 'left';
     const {text} = this.props;
     const marquee = `
-      <marquee
-        class="${styles.marquee}"
-        scrolldelay="${delay}"
-        direction="${outerDirection}"
-        behavior="alternate">
-          <marquee
-            scrolldelay="${delay}"
-            direction="${innerDirection}"
-            behavior="alternate">
-              ${text}
-          </marquee>
+      <marquee class="${styles.marquee}" scrolldelay="${delay}" direction="${outerDirection}" behavior="alternate">
+        <marquee scrolldelay="${delay}" direction="${innerDirection}" behavior="alternate">
+          ${text}
+        </marquee>
       </marquee>
     `;
     return (

@@ -6,7 +6,9 @@
 
 .content {
   padding-top: 9.375rem;
+  width: 43.125rem;
   height: 100%;
+  margin: 0 auto;
 }
 
 .frame {

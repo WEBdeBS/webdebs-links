@@ -6,7 +6,7 @@
 
 .content {
   padding-top: 9.375rem;
-  width: 43.125rem;
+  max-width: 43.125rem;
   height: 100%;
   margin: 0 auto;
 }
@@ -33,3 +33,15 @@
   z-index: 2;
 }
 
+@media (max-width: 30rem) {
+
+  .content {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .frame {
+    display: none;
+  }
+
+}

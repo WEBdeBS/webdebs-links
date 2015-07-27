@@ -10,7 +10,7 @@ export default class Cookies extends Component {
   static redirect() {
     const cookie = dough();
     if (!cookie.get('accept')) {
-      cookie.set('accept', true)
+      cookie.set('accept', true);
       location.href = '/cookies';
     }
   }

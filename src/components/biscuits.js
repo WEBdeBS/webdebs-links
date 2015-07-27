@@ -31,7 +31,7 @@ export default class Biscuits extends Component {
       cookie2 = <span key='cookie' className='cookie cookie--2'></span>;
     }
     return (
-      <div>
+      <div className={styles.biscuits}>
         <ReactCSSTransitionGroup transitionName="cookie--0">
           {cookie0}
         </ReactCSSTransitionGroup>

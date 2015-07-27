@@ -20,12 +20,18 @@
   transform: rotate(30deg);
 }
 
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 
   .logo {
     background-image: url('../images/logo@2x.png');
+  }
+
+}
+
+@media (max-width: 30rem) {
+
+  .header {
+    height: 4.6875rem;
   }
 
 }

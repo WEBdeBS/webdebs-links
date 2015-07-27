@@ -30,3 +30,11 @@
     color: #45FF04;
   }
 }
+
+@media (max-width: 30rem) {
+
+  .marquee {
+    display: none;
+  }
+
+}

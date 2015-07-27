@@ -41,3 +41,11 @@
   background-color: #000;
   color: #fff;
 }
+
+@media (max-width: 30rem) {
+
+  .cookies {
+    padding-bottom: 5rem;
+  }
+
+}

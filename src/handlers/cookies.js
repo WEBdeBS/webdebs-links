@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 import dough from 'cookie-dough';
 
 import styles from '../styles/cookies.css';
@@ -22,14 +23,14 @@ export default class Cookies extends Component {
           <h1 className={styles.title}>Cookies</h1>
         </header>
         <blockquote className={styles.quote}>
-          &laquo; Mauris sollicitudin, felis sed suscipit vehicula, leo erat placerat est, in varius est arcu sit amet lectus. &raquo;
+          &laquo; We use cookies to ensure that we give you the best experience on our website. &raquo;
         </blockquote>
         <p className={styles.text}>
-          Nunc tempus magna lorem, sollicitudin dictum dui sodales et. Vestibulum malesuada libero est, eu pretium odio elementum a. Nulla malesuada fermentum nulla accumsan aliquam. Ut vitae ipsum finibus, scelerisque nisi ac, iaculis ante. Aliquam tellus enim, convallis id odio ut, placerat malesuada sapien.
+          Put the butter and sugars into a bowl and beat until creamy. Beat in the vanilla extract and egg. Sieve the flour, bicarbonate of soda and salt over the mixture and mix in with a wooden spoon. Add the chocolate chips and stir well.
         </p>
-        <a className={styles.button} href="#">
+        <Link className={styles.button} to="homepage">
           Accept and download the recipe
-        </a>
+        </Link>
         <Biscuits />
       </article>
     );

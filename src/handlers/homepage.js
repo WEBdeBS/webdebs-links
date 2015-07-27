@@ -6,6 +6,7 @@ import Storage from '../utils/storage';
 import Links from '../components/links';
 import Pagination from '../components/pagination';
 import Marquee from '../components/marquee';
+import Cookies from './cookies';
 
 const defaultPage = 1;
 
@@ -13,6 +14,10 @@ export default class Homepage extends Component {
 
   static fetchData(state) {
     return getLinks(state.params.page || defaultPage);
+  }
+
+  componentDidMount() {
+    Cookies.redirect();
   }
 
   render() {

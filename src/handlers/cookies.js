@@ -1,10 +1,19 @@
 import React, {Component} from 'react';
+import dough from 'cookie-dough';
 
 import styles from '../styles/cookies.css';
 
 import Biscuits from '../components/biscuits';
 
 export default class Cookies extends Component {
+
+  static redirect() {
+    const cookie = dough();
+    if (!cookie.get('accept')) {
+      cookie.set('accept', true)
+      location.href = '/cookies';
+    }
+  }
 
   render() {
     return (

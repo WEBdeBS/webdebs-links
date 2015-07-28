@@ -1,3 +1,7 @@
+# WEBdeBS Links
+
+[Slack](https://webdebs-slack.herokuapp.com/) => [Bot](https://github.com/cirpo/hubot-save-links) => [Web](http://webdebs-links.herokuapp.com/)
+
 ## Installation
 
 ```
@@ -28,3 +32,7 @@ npm run lint
 ```
 npm test
 ```
+
+## Credits
+
+Design: [Manuel Natale](http://www.manuelnatale.com/)

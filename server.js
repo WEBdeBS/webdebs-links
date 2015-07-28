@@ -5,11 +5,11 @@ import fs from 'fs';
 import React from 'react';
 import Router from 'react-router';
 
+import config from './webpack/development.config';
 import routes from './dist/routes';
 import fetchData from './src/utils/fetch-data';
 
 const app = express();
-import config from './webpack/development.config';
 const compiler = webpack(config);
 const path = __dirname + '/index.html';
 const isProduction = process.env.NODE_ENV === 'production';

@@ -1,7 +1,7 @@
 import request from 'superagent';
 import {promise} from 'when';
 
-const url = 'http://safe-woodland-6446.herokuapp.com/links?page=';
+const url = 'https://safe-woodland-6446.herokuapp.com/links?page=';
 
 export function getLinks(page) {
   return promise((resolve, reject) => {

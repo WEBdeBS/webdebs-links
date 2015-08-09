@@ -14,6 +14,8 @@ const compiler = webpack(config);
 const path = __dirname + '/index.html';
 const isProduction = process.env.NODE_ENV === 'production';
 
+const template = fs.readFileSync(path, {encoding: 'utf8'});
+
 app.use(cookieParser());
 
 if (isProduction) {
@@ -30,10 +32,9 @@ app.get('*', (req, res) => {
     fetchData(state).then((data) => {
       const props = {data, state, req};
       const html = React.renderToString(<Root {...props} />);
-      let template = fs.readFileSync(path).toString();
-      template = template.replace('__HTML__', html);
-      template = template.replace('__DATA__', JSON.stringify(data));
-      res.send(template);
+      let content = template.replace('__HTML__', html);
+      content = content.replace('__DATA__', JSON.stringify(data));
+      res.send(content);
     });
   });
 });
